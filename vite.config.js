@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/joycafe/',   // repo name for GitHub Pages
+  base: '/Joy-Cafe/',   // repo name for GitHub Pages
   plugins: [tailwindcss()],
 })
