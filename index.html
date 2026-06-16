@@ -4,16 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JOY Café</title>
-    <script type="module" crossorigin src="/Joy-Cafe/assets/index-ujW-JNUK.js"></script>
-    <link rel="stylesheet" crossorigin href="/Joy-Cafe/assets/index-NIK2qDuv.css">
+    <link rel="shortcut icon" href="/Joy-Cafe/joy-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" crossorigin src="/Joy-Cafe/assets/index-DOIIXOuv.js"></script>
+    <link rel="stylesheet" crossorigin href="/Joy-Cafe/assets/index-Bv-HOyt3.css">
   </head>
-  <body class="bg-amber-100">
-    <h1 class="text-4xl font-bold text-center text-amber-800 mt-10">
-      Hello JOY Café
-    </h1>
-    <p class="text-center text-lg text-slate-700">
-      Tailwind v4.3 + Vite setup complete!
-    </p>
+  <body>
+    <!-- nav bar -->
+    <nav class="bg-amber-800 flex justify-between items-center px-4 py-2 fixed w-full z-50">
+      <!-- left side with logo img and text -->
+       <div class="flex items-center gap-4">
+         <!-- logo image container-->
+         <div class="w-16 p-1 aspect-square flex items-center justify-center rounded-full bg-yellow-500 pl-3 shadow-sm shadow-black">
+           <!-- logo image -->
+           <img src="/Joy-Cafe/joy-logo.svg" alt="logo" class="object-center object-cover">
+         </div>
+         <h1 class="uppercase text-4xl font-bold text-yellow-100">JOY Café</h1>
+       </div>
+      <!-- mobile menu -->
+       <div>
+        <i id="mobile-menu-icon" class="fa-solid fa-bars text-3xl text-amber-300 text-shadow-md text-shadow-black cursor-pointer hover:scale-110 focus:scale-110" aria-label="mobile menu icon"></i>
+       </div>
+    </nav>
+    <!-- hero section -->
+     <section id="hero" class="bg-cover bg-center relative h-screen flex justify-center items-center p-10">
+      <!-- cover overlay -->
+      <div class="absolute inset-0 bg-linear-150 from-black/20 to-black/90 backdrop-blur-xs z-10"></div>
+      <!-- hero main div -->
+      <div class="relative z-30 h-1/2 text-white py-8 px-4 tracking-widest flex flex-col gap-6 justify-between items-center">
+        <div id="heroText" class="text-center">
+          <h2 id="heroTitle" class="text-3xl font-bold fade-in show text-slate-200 mb-4">Welcome to JOY Café</h2>
+          <p id="heroParagraph" class="text-lg text-justify fade-in show text-slate-300">Where every cup brings happiness. Sip, relax, and enjoy the taste of joy.</p>
+        </div>
+        <button id="heroCtaBtn" class="border border-amber-300/30 text-slate-200 rounded-2xl shadow-md shadow-amber-600 text-lg font-bold px-4 py-3 w-fit cursor-pointer text-shadow-black hover:bg-amber-400 hover:text-shadow-md hover:scale-110 focus:bg-amber-400 focus:text-shadow-md focus:scale-110">Explore Menu</button>
+      </div>
+     </section>
+     <!-- about us section -->
+      <section id="about-us" class="bg-amber-600 py-10 px-4">
+        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center">About JOY Café</h3>
+        <div class="grid grid-cols-1 gap-6 p-6">
+          <div>
+            <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black">We’re passionate about serving fresh, flavorful coffee and creating a space where everyone belongs. Our mission is simple: bring people together through great taste and warm hospitality.</p>
+          </div>
+          <div class="w-10/12 mx-auto">
+            <img src="/Joy-Cafe/joy-cafe.png" alt="joy cafe sense" class="rounded-2xl object-center object-cover">
+          </div>
+        </div>
+      </section>
+      <!-- feature menu section-->
+       <section id="featured-menu" style="background-image: url('/Joy-Cafe/joy-cafe.png');" class="bg-fixed bg-center relative px-4 py-10">
+        <div class="absolute inset-0 bg-linear-150 from-black/50 to-black/70"></div>
+        <div class="relative z-10 text-white mb-6">
+          <h3 class="text-3xl font-bold text-center text-yellow-100 text-shadow-md text-shadow-black mb-4">Featured Menu</h3>
+          <p class="text-lg text-justify leading-relaxed tracking-wide text-slate-200 text-shadow-xs text-shadow-black">Discover our hand‑picked favorites — crafted with passion, brewed with care, and served with joy. From signature drinks to sweet indulgences, each item is made to brighten your day.</p>
+        </div>
+        <div id="featured-menu-container" class="relative z-10 grid grid-cols-1 gap-10 select-none cursor-default mb-6">
+          <!-- JS code will goes here -->
+        </div>
+        <div class="flex justify-center">
+          <button id="featuredMenuCtaBtn" class="relative z-10 border backdrop-blur-sm border-amber-300/30 text-slate-200 rounded-2xl shadow-md shadow-amber-600 text-lg font-bold px-4 py-3 w-fit cursor-pointer text-shadow-black hover:bg-amber-400 hover:text-shadow-md hover:scale-110 focus:bg-amber-400 focus:text-shadow-md focus:scale-110">Explore Menu</button>
+        </div>
+       </section>
+       <section id="story" class="bg-amber-600 py-10 px-4">
+        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6">Our Story</h3>
+        <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black">We’re passionate about serving fresh, flavorful coffee and creating a space where everyone belongs. Our mission is simple: bring people together through great taste and warm hospitality.</p>
+       </section>
+       <section id="reviews"></section>
+       <section id="gallery"></section>
+       <section id="contact"></section>
+       <section id="footer"></section>
 
   </body>
 </html>
