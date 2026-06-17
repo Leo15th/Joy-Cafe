@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/joy-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="select-none cursor-default">
     <!-- nav bar -->
     <nav class="bg-amber-800 flex justify-between items-center px-4 py-2 fixed w-full z-50">
       <!-- left side with logo img and text -->
@@ -56,7 +56,7 @@
           <h3 class="text-3xl font-bold text-center text-yellow-100 text-shadow-md text-shadow-black mb-4">Featured Menu</h3>
           <p class="text-lg text-justify leading-relaxed tracking-wide text-slate-200 text-shadow-xs text-shadow-black">Discover our hand‑picked favorites — crafted with passion, brewed with care, and served with joy. From signature drinks to sweet indulgences, each item is made to brighten your day.</p>
         </div>
-        <div id="featured-menu-container" class="relative z-10 grid grid-cols-1 gap-10 select-none cursor-default mb-6">
+        <div id="featured-menu-container" class="relative z-10 grid grid-cols-1 gap-10 mb-6">
           <!-- JS code will goes here -->
         </div>
         <div class="flex justify-center">
@@ -115,7 +115,7 @@
         <!-- need to add swiper.js -->
        </section>
        <!-- contact section -->
-       <section id="contact" class="select-none bg-amber-500 py-10 px-4">
+       <section id="contact" class="bg-amber-500 py-10 px-4">
         <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6">Get in Touch</h3>
         <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black">We’d love to hear from you. Whether it’s a question, feedback, or just to say hi — drop us a message!</p>
         <div class="w-4/5 mx-auto mt-10 p-6 rounded-2xl shadow-lg shadow-black tracking-widest">
@@ -152,7 +152,7 @@
           <!-- about -->
           <div class="shadow-md shadow-slate-300 p-6 rounded-2xl">
             <!-- header -->
-            <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-6 w-fit mx-auto">
               <!-- logo image container-->
               <div class="w-12 p-1 aspect-square flex items-center justify-center rounded-full bg-yellow-500 pl-3 shadow-sm shadow-black">
                 <!-- logo image -->
@@ -163,19 +163,36 @@
             <p class="text-lg text-justify leading-relaxed tracking-wide text-slate-200 text-shadow-xs text-shadow-black">Where every cup brings happiness. Sip, relax, and enjoy the taste of joy.</p>
           </div>
           <!-- quicklink -->
-           <div class="shadow-md shadow-slate-300 p-6 rounded-2xl cursor-not-allowed">
-            <ul>
-              <li><a href="">home</a></li>
-              <li><a href="">about us</a></li>
-              <li><a href="">featured menu</a></li>
-              <li><a href="">our story</a></li>
-              <li><a href="">customer reviews</a></li>
-              <li><a href="">gallery</a></li>
+           <div class="shadow-md shadow-slate-300 p-6 rounded-2xl">
+            <h4 class="text-2xl font-bold text-slate-100 text-center mb-6">Quick Links</h4>
+            <ul class="grid grid-cols-2 gap-x-10 gap-y-4 mx-auto w-fit">
+              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">home</a></li>
+              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">about us</a></li>
+              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">featured menu</a></li>
+              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">our story</a></li>
+              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">customer reviews</a></li>
+              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">gallery</a></li>
             </ul>
            </div>
           <!-- opening hours and social icons -->
-           <div class="shadow-md shadow-slate-300 p-6 rounded-2xl cursor-not-allowed">
-              <h4>Follow Us</h4>
+           <div class="shadow-md shadow-slate-300 p-6 rounded-2xl">
+              <h4 class="text-2xl font-bold text-slate-100 text-center mb-6">Opening Hours</h4>
+              <ul class="grid grid-cols-1 gap-x-10 gap-y-4 mx-auto w-fit">
+                <li class="w-fit">
+                  <span class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black">Mon - Fri:</span>
+                  <span class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black">8:00 AM - 8:00 PM</span>
+                </li>
+                <li class="w-fit">
+                  <span class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black">Sat - Sun:</span>
+                  <span class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black">9:00 AM - 10:00 PM</span>
+                </li>
+              </ul>
+              <h4 class="text-2xl font-bold text-slate-100 text-center mb-4 mt-7">Follow Us</h4>
+              <ul class="flex justify-center gap-4">
+                <li><a href="https://www.facebook.com" class="text-2xl text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://x.com/" class="text-2xl text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/" class="text-2xl text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
            </div>
         </div>
        </footer>
