@@ -66,7 +66,7 @@ signaturePhotos.forEach(item =>{
     featuredMenuContainer.innerHTML +=`
     <div class="image-card w-3/4 mx-auto rounded-3xl overflow-hidden backdrop-blur-sm shadow-md shadow-slate-300 md:w-full">
             <img src="${item.url}" alt="${item.title}" class="image aspect-square object-cover object-center w-full">
-            <div class="px-4 py-2">
+            <div class="px-4 py-2" loading="lazy">
               <h3 class="image-title text-2xl font-bold text-slate-100 text-shadow-md text-shadow-black md:mb-4">${item.title}</h3>
               <p class="imgage-description text-lg text-slate-100 text-shadow-sm text-shadow-black">${item.description}</p>
             </div>
