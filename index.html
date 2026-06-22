@@ -28,8 +28,8 @@
     <title>JOY Café</title>
     <link rel="shortcut icon" href="/joy-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" crossorigin src="/assets/index-Dbk9MpWE.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-IVE4RPFL.css">
+    <script type="module" crossorigin src="/assets/index-CM5GA8uS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-8bZufsam.css">
   </head>
   <body class="select-none cursor-default">
     <!-- nav bar -->
@@ -44,60 +44,82 @@
          <h1 class="uppercase text-4xl font-bold text-yellow-100">JOY Café</h1>
        </div>
       <!-- mobile menu -->
-       <div aria-label="mobile menu icon">
+       <div class="lg:hidden">
         <i id="mobile-menu-icon" class="fa-solid fa-bars text-3xl text-amber-300 text-shadow-md text-shadow-black cursor-pointer hover:scale-110 focus:scale-110"></i>
+        <span class="sr-only">Mobile Menu Icon</span>
        </div>
-    </nav>
+       <!-- mobile menu -->
+        <div id="mobile-menu" class="hidden absolute transition-all duration-300 ease-in-out translate-x-full opacity-0 pointer-events-none top-full z-50 right-0 w-1/2 md:w-1/3">
+         <ul class="bg-black/90 text-amber-500 px-6 py-3 text-lg flex flex-col gap-4 capitalize rounded-bl-2xl">
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#hero">Home</a></li>
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#about-us">About Us</a></li>
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#featured-menu">Featured Menu</a></li>
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#story">Our Story</a></li>
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#reviews">customer reviews</a></li>
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#gallery">Gallery</a></li>
+           <li class="shadow-md shadow-amber-300 rounded-lg px-2 py-1 hover:bg-amber-700 hover:text-shadow-lg hover:text-shadow-black hover:text-slate-300 cursor-pointer hover:scale-110"><a href="#contact">Contact Us</a></li>
+         </ul>
+        </div>
+        <ul id="navMenu" class="hidden text-amber-500 text-xl font-bold lg:flex gap-8 capitalize">
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#hero">Home</a></li>
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#about-us">About Us</a></li>
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#featured-menu">Featured Menu</a></li>
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#story">Our Story</a></li>
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#reviews">customer reviews</a></li>
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#gallery">Gallery</a></li>
+          <li class="hover:text-shadow-md text-shadow-black/80 hover:text-amber-300 text-shadow-xs"><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
     <!-- hero section -->
-     <section id="hero" class="bg-cover bg-center relative h-screen flex justify-center items-center p-10">
+     <section id="hero" class="bg-cover bg-center relative h-screen flex justify-center items-center p-10 scroll-mt-12">
       <!-- cover overlay -->
       <div class="absolute inset-0 bg-linear-150 from-black/20 to-black/90 backdrop-blur-xs z-10"></div>
       <!-- hero main div -->
       <div class="relative z-30 h-1/2 text-white py-8 px-4 tracking-widest flex flex-col gap-6 justify-between items-center">
         <div id="heroText" class="text-center">
-          <h2 id="heroTitle" class="text-3xl font-bold fade-in show text-slate-200 mb-4">Welcome to JOY Café</h2>
-          <p id="heroParagraph" class="text-lg text-justify fade-in show text-slate-300">Where every cup brings happiness. Sip, relax, and enjoy the taste of joy.</p>
+          <h2 id="heroTitle" class="text-3xl font-bold fade-in show text-slate-200 mb-4 md:text-4xl md:mb-6">Welcome to JOY Café</h2>
+          <p id="heroParagraph" class="text-lg text-justify fade-in show text-slate-300 md:text-xl">Where every cup brings happiness. Sip, relax, and enjoy the taste of joy.</p>
         </div>
-        <button id="heroCtaBtn" class="border border-amber-300/30 text-slate-200 rounded-2xl shadow-md shadow-amber-600 text-lg font-bold px-4 py-3 w-fit cursor-pointer text-shadow-black hover:bg-amber-400 hover:text-shadow-md hover:scale-110 focus:bg-amber-400 focus:text-shadow-md focus:scale-110">Explore Menu</button>
+        <button id="heroCtaBtn" class="border border-amber-300/30 text-slate-200 rounded-2xl shadow-md shadow-amber-600 text-lg font-bold px-4 py-3 w-fit cursor-pointer text-shadow-black/80 hover:bg-amber-400 hover:text-shadow-md hover:scale-110 focus:bg-amber-400 focus:text-shadow-md focus:scale-110 md:text-xl">Explore Menu</button>
       </div>
      </section>
      <!-- about us section -->
-      <section id="about-us" class="bg-amber-600 py-10 px-4">
-        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center">About JOY Café</h3>
-        <div class="grid grid-cols-1 gap-6 p-6">
+      <section id="about-us" class="bg-amber-600 py-10 px-4 scroll-mt-12 md:py-16">
+        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center md:text-4xl md:text-shadow-lg mb-4 lg:mb-10">About JOY Café</h3>
+        <div class="grid grid-cols-1 gap-6 p-6 md:grid-cols-2 items-center lg:items-start lg:gap-3 lg:px-36">
           <div>
-            <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black">We’re passionate about serving fresh, flavorful coffee and creating a space where everyone belongs. Our mission is simple: bring people together through great taste and warm hospitality.</p>
+            <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black md:text-xl lg:px-28">We’re passionate about serving fresh, flavorful coffee and creating a space where everyone belongs. Our mission is simple: bring people together through great taste and warm hospitality.</p>
           </div>
-          <div class="w-10/12 mx-auto">
+          <div class="w-10/12 mx-auto lg:w-1/2">
             <img src="/joy-cafe.png" alt="joy cafe sense" class="rounded-2xl object-center object-cover">
           </div>
         </div>
       </section>
       <!-- feature menu section-->
-       <section id="featured-menu" style="background-image: url('/joy-cafe.png');" class="bg-cover bg-center relative px-4 py-10">
+       <section id="featured-menu" style="background-image: url('/joy-cafe.png');" class="bg-cover bg-center relative px-4 py-10 scroll-mt-12 md:px-10 md:py-16">
         <div class="absolute inset-0 bg-linear-150 from-black/50 to-black/70"></div>
-        <div class="relative z-10 text-white mb-6">
-          <h3 class="text-3xl font-bold text-center text-yellow-100 text-shadow-md text-shadow-black mb-4">Featured Menu</h3>
-          <p class="text-lg text-justify leading-relaxed tracking-wide text-slate-200 text-shadow-xs text-shadow-black">Discover our hand‑picked favorites — crafted with passion, brewed with care, and served with joy. From signature drinks to sweet indulgences, each item is made to brighten your day.</p>
+        <div class="relative z-10 text-white mb-6 md:mb-8 lg:px-20">
+          <h3 class="text-3xl font-bold text-center text-yellow-100 text-shadow-md text-shadow-black mb-4 md:mb-10 md:text-4xl">Featured Menu</h3>
+          <p class="text-lg text-justify leading-relaxed tracking-wide text-slate-200 text-shadow-xs text-shadow-black md:text-xl">Discover our hand‑picked favorites — crafted with passion, brewed with care, and served with joy. From signature drinks to sweet indulgences, each item is made to brighten your day.</p>
         </div>
-        <div id="featured-menu-container" class="relative z-10 grid grid-cols-1 gap-10 mb-6">
+        <div id="featured-menu-container" class="relative z-10 grid grid-cols-1 gap-10 mb-6 md:grid-cols-2 md:mb-10 lg:grid-cols-4">
           <!-- JS code will goes here -->
         </div>
         <div class="flex justify-center">
-          <button id="featuredMenuCtaBtn" class="relative z-10 border backdrop-blur-sm border-amber-300/30 text-slate-200 rounded-2xl shadow-md shadow-amber-600 text-lg font-bold px-4 py-3 w-fit cursor-pointer text-shadow-black hover:bg-amber-400 hover:text-shadow-md hover:scale-110 focus:bg-amber-400 focus:text-shadow-md focus:scale-110">Explore Menu</button>
+          <button id="featuredMenuCtaBtn" class="relative z-10 border backdrop-blur-sm border-amber-300/30 text-slate-200 rounded-2xl shadow-md shadow-amber-600 text-lg font-bold px-4 py-3 w-fit cursor-pointer text-shadow-black hover:bg-amber-400 hover:text-shadow-md hover:scale-110 focus:bg-amber-400 focus:text-shadow-md focus:scale-110 md:text-xl">Explore Menu</button>
         </div>
        </section>
        <!-- story section -->
-       <section id="story" class="bg-amber-600  py-10 px-4">
-        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6">Our Story</h3>
-        <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black">We’re passionate about serving fresh, flavorful coffee and creating a space where everyone belongs. Our mission is simple: bring people together through great taste and warm hospitality.</p>
+       <section id="story" class="bg-amber-600 py-10 px-4 scroll-mt-12 md:py-16 md:px-10">
+        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6 md:text-4xl md:mb-10">Our Story</h3>
+        <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black md:text-xl">We’re passionate about serving fresh, flavorful coffee and creating a space where everyone belongs. Our mission is simple: bring people together through great taste and warm hospitality.</p>
        </section>
        <!-- reviews section -->
-       <section id="reviews" class="py-12 bg-amber-700">
-          <div class="max-w-6xl mx-auto px-4">
-            <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6">⭐ Customer Reviews</h3>
+       <section id="reviews" class="py-12 bg-amber-700 scroll-mt-12 md:py-16">
+          <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6 md:text-4xl md:mb-10">⭐ Customer Reviews</h3>
             
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 md:px-4">
               <!-- Review Card -->
               <div class="bg-white shadow-lg rounded-lg p-6">
                 <p class="text-gray-700 italic mb-4">
@@ -139,40 +161,42 @@
         <!-- need to add swiper.js -->
        </section>
        <!-- contact section -->
-       <section id="contact" class="bg-amber-500 py-10 px-4">
-        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6">Get in Touch</h3>
-        <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black">We’d love to hear from you. Whether it’s a question, feedback, or just to say hi — drop us a message!</p>
-        <div class="w-4/5 mx-auto mt-10 p-6 rounded-2xl shadow-lg shadow-black tracking-widest">
-          <h3 class="text-xl font-bold text-black text-shadow-xs text-shadow-black mb-6 text-center">Contact Information</h3>
-          <ul class="shadow-sm w-fit p-6 shadow-black rounded-3xl border border-black/20 flex flex-col justify-center gap-3">
-            <li class="w-fit"><a href="" class="text-lg flex items-center gap-3 text-shadow-black hover:text-slate-200 hover:text-shadow-lg">
-              <i class="fa-solid fa-envelope"></i>
-              <span>joycafe@info</span>
-            </a></li>
-            <li class="w-fit"><a href="" class="text-lg flex items-center gap-3 text-shadow-black hover:text-slate-200 hover:text-shadow-lg">
-              <i class="fa-solid fa-phone"></i>
-              <span>+66 949407681</span>
-            </a></li>
-            <li class="w-fit"><a href="" class="text-lg flex items-center gap-3 text-shadow-black hover:text-slate-200 hover:text-shadow-lg">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Chiang Mai, Thailand</span>
-            </a></li>
-          </ul>
+       <section id="contact" class="bg-amber-500 py-10 px-4 scroll-mt-12 md:py-16 md:px-10">
+        <h3 class="text-3xl font-bold text-yellow-100 text-shadow-md text-shadow-black text-center mb-6 md:text-4xl md:mb-10">Get in Touch</h3>
+        <p class="text-lg text-justify leading-relaxed tracking-wide text-black text-shadow-xs text-shadow-black md:text-xl lg:text-center">We’d love to hear from you. Whether it’s a question, feedback, or just to say hi — drop us a message!</p>
+        <div class="grid grid-cols-1 gap-10 mt-10 items-center md:grid-cols-2">
+          <div class="w-4/5 mx-auto p-6 rounded-2xl shadow-lg shadow-black tracking-widest md:w-full">
+            <h3 class="text-xl font-bold text-black text-shadow-xs text-shadow-black mb-6 text-center md:text-2xl md:mb-8">Contact Information</h3>
+            <ul class="shadow-sm w-fit p-6 shadow-black rounded-3xl border border-black/20 flex flex-col justify-center gap-3 md:gap-6">
+              <li class="w-fit"><a href="mailto:pwaiag2023@gmail.com" class="text-lg flex items-center gap-3 text-shadow-black hover:text-slate-200 hover:text-shadow-lg md:text-xl md:gap-4">
+                <i class="fa-solid fa-envelope"></i>
+                <span>joycafe@info</span>
+              </a></li>
+              <li class="w-fit"><a href="tel:+66949407681" class="text-lg flex items-center gap-3 text-shadow-black hover:text-slate-200 hover:text-shadow-lg md:text-xl md:gap-4">
+                <i class="fa-solid fa-phone"></i>
+                <span>+66 949407681</span>
+              </a></li>
+              <li class="w-fit"><a href="https://maps.app.goo.gl/xF1YiiwWMSxGFVga8" class="text-lg flex items-center gap-3 text-shadow-black hover:text-slate-200 hover:text-shadow-lg md:text-xl md:gap-4">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Chiang Mai, Thailand</span>
+              </a></li>
+            </ul>
+          </div>
+          <form id="message-form" class="w-4/5 mx-auto p-6 rounded-2xl shadow-lg shadow-black tracking-widest leading-relaxed md:w-full">
+            <h3 class="text-xl font-bold text-black text-shadow-xs text-shadow-black mb-6 text-center md:text-2xl">Send Message Us</h3>
+            <label for="name" class="text-lg font-bold capitalize px-2 md:text-xl block mb-2 md:mb-3">Name: </label>
+            <input type="text" name="name" id="name" required class="text-md px-2 py-1 w-full rounded-xl outline-0 bg-amber-800/70 text-yellow-100 text-shadow-md text-shadow-black shadow-black transition-all duration-300 ease-in-out focus:shadow-md focus:scale-105 mb-4 md:text-lg md:mb-5" autocomplete="off">
+            <label for="email" class="text-lg font-bold capitalize px-2 md:text-xl block mb-2 md:mb-3">Email: </label>
+            <input type="email" name="email" id="email" class="text-md px-2 py-1 w-full rounded-xl outline-0 bg-amber-800/70 text-yellow-100 text-shadow-md text-shadow-black shadow-black transition-all duration-300 ease-in-out focus:shadow-md focus:scale-105 mb-4 md:text-lg md:mb-5" autocomplete="new-password">
+            <label for="message" class="text-lg font-bold capitalize px-2 md:text-xl block mb-2 md:mb-3">leave a message here</label>
+            <textarea name="message" id="message" class="w-full h-24 resize-none text-md px-2 py-1 rounded-xl outline-0 bg-amber-800/70 text-yellow-100 text-shadow-md text-shadow-black shadow-black transition-all duration-300 ease-in-out focus:shadow-md focus:scale-105 mb-4 md:text-lg md:mb-5" autocomplete="off"></textarea>
+            <button type="submit" class="text-lg text-black px-3 py-2 rounded-xl font-bold bg-amber-800/50 shadow-amber-700 shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:text-white hover:scale-110 text-shadow-black hover:text-shadow-md hover:shadow-amber-950 block mx-auto md:text-xl md:px-4">Send</button>
+          </form>
         </div>
-        <form class="w-4/5 mx-auto mt-10 p-6 rounded-2xl shadow-lg shadow-black tracking-widest leading-relaxed">
-          <h3 class="text-xl font-bold text-black text-shadow-xs text-shadow-black mb-6 text-center">Send Message Us</h3>
-          <label for="name" class="text-lg font-bold capitalize px-2">Name: </label>
-          <input type="text" name="name" id="name" required class="text-md px-2 py-1 w-full rounded-xl outline-0 bg-amber-800/70 text-yellow-100 text-shadow-md text-shadow-black shadow-black transition-all duration-300 ease-in-out focus:shadow-md focus:scale-105 mb-4">
-          <label for="email" class="text-lg font-bold capitalize px-2">Email: </label>
-          <input type="email" name="email" id="email" class="text-md px-2 py-1 w-full rounded-xl outline-0 bg-amber-800/70 text-yellow-100 text-shadow-md text-shadow-black shadow-black transition-all duration-300 ease-in-out focus:shadow-md focus:scale-105 mb-4">
-          <label for="message" class="text-lg font-bold capitalize px-2">leave a message here</label>
-          <textarea name="message" id="message" class="w-full h-24 resize-none text-md px-2 py-1 rounded-xl outline-0 bg-amber-800/70 text-yellow-100 text-shadow-md text-shadow-black shadow-black transition-all duration-300 ease-in-out focus:shadow-md focus:scale-105 mb-4"></textarea>
-          <button class="text-lg text-black px-3 py-2 rounded-xl font-bold bg-amber-800/50 shadow-amber-700 shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:text-white hover:scale-110 text-shadow-black hover:text-shadow-md hover:shadow-amber-950 block mx-auto">Send</button>
-        </form>
        </section>
        <!-- footer -->
-       <footer class="bg-slate-800 py-10 px-4">
-        <div class="grid grid-cols-1 gap-6">
+       <footer class="bg-slate-800 py-10 px-4 md:py-16">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
           <!-- about -->
           <div class="shadow-md shadow-slate-300 p-6 rounded-2xl">
             <!-- header -->
@@ -189,13 +213,13 @@
           <!-- quicklink -->
            <div class="shadow-md shadow-slate-300 p-6 rounded-2xl">
             <h4 class="text-2xl font-bold text-slate-100 text-center mb-6">Quick Links</h4>
-            <ul class="grid grid-cols-2 gap-x-10 gap-y-4 mx-auto w-fit">
-              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">home</a></li>
-              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">about us</a></li>
-              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">featured menu</a></li>
-              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">our story</a></li>
-              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">customer reviews</a></li>
-              <li class="w-fit"><a href="" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500">gallery</a></li>
+            <ul class="grid grid-cols-2 gap-x-10 gap-y-4 mx-auto w-fit md:grid-cols-1">
+              <li class="w-fit"><a href="#hero" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500 md:shadow-2xs shadow-white/50 md:px-3 md:py-1 md:rounded-b-md">home</a></li>
+              <li class="w-fit"><a href="#about-us" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500 md:shadow-2xs shadow-white/50 md:px-3 md:py-1 md:rounded-b-md">about us</a></li>
+              <li class="w-fit"><a href="#featured-menu" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500 md:shadow-2xs shadow-white/50 md:px-3 md:py-1 md:rounded-b-md">featured menu</a></li>
+              <li class="w-fit"><a href="#story" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500 md:shadow-2xs shadow-white/50 md:px-3 md:py-1 md:rounded-b-md">our story</a></li>
+              <li class="w-fit"><a href="#reviews" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500 md:shadow-2xs shadow-white/50 md:px-3 md:py-1 md:rounded-b-md">customer reviews</a></li>
+              <li class="w-fit"><a href="#gallery" class="text-lg capitalize text-slate-200 text-shadow-md text-shadow-black hover:text-amber-500 md:shadow-2xs shadow-white/50 md:px-3 md:py-1 md:rounded-b-md">gallery</a></li>
             </ul>
            </div>
           <!-- opening hours and social icons -->
